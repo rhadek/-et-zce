@@ -16,5 +16,31 @@ namespace p01
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string text = textBox1.Text;
+            int pocetsou = 0;
+            int pocetsamo = 0;
+            int pocbi = 0;
+            string samohlasky = "aeiouyáéěíóúůý";
+            string souhlasky = "bcčdďfghjklmnpqrřsštťvwxzž";
+            foreach (char s in text)
+            {
+                if (samohlasky.Contains(s))
+                {
+                    pocetsamo++;
+                }
+                else if (souhlasky.Contains(s))
+                {
+                    pocetsou++;
+                }
+                else
+                {
+                    pocbi++;
+                }
+            }
+            MessageBox.Show("pocet samohlásek ve větě je " + pocetsamo + ", pocet souhlásek je " + pocetsou + "a pocet nepísmenných znaků je " + pocbi);
+        }
     }
 }
