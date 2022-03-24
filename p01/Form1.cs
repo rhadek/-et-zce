@@ -25,6 +25,7 @@ namespace p01
             int pocbi = 0;
             string samohlasky = "aeiouyáéěíóúůý";
             string souhlasky = "bcčdďfghjklmnpqrřsštťvwxzž";
+            text = text.ToLower();
             foreach (char s in text)
             {
                 if (samohlasky.Contains(s))
@@ -35,11 +36,10 @@ namespace p01
                 {
                     pocetsou++;
                 }
-                else
-                {
-                    pocbi++;
-                }
+           
             }
+            int pocetstring = text.Length;
+            pocbi = pocetstring - (pocetsou + pocetsamo);
             MessageBox.Show("pocet samohlásek ve větě je " + pocetsamo + ", pocet souhlásek je " + pocetsou + "a pocet nepísmenných znaků je " + pocbi);
         }
     }
