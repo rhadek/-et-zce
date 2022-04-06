@@ -16,5 +16,36 @@ namespace p03
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int K = -1;
+            string text = textBox1.Text;
+            foreach (char s in text)
+            {
+                if ((int)s >= 48 && (int)s <= 57)
+                {
+                    K = (int)s - 48; break;
+                }
+            }
+            if (K <= text.Length)
+            {
+                if (K == -1)
+                {
+                    text = textBox1.Text;
+                }
+                else
+                {
+                    text = text.Remove(text.Length - K);
+                }
+                
+            }
+            else
+            {
+                text = "";
+            }
+            
+            MessageBox.Show("" + text);
+        }
     }
 }
