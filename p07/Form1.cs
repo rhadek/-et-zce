@@ -19,13 +19,28 @@ namespace p07
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string[] pole = new string[30] {  "._", "_...", "_._.", "_..", ".", ".._.", "__.", "....", "..", ".___", "_._", "._..", "__", " _.", "___", ".__.", "__._", "._.", "...", "_", ".._", "..._", ".__", "_.._", "_.__", "__.."};
+            string[] morse = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
             string text = textBox1.Text;
             string mor = "";
             foreach (char s in text)
             {
-
+                if (s == ' ')
+                {
+                    mor += "/";
+                }
+                else
+                {
+                    mor += morse[((int)s - 97)] + " ";
+                }
+                
             }
+            textBox2.Text = mor;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }
