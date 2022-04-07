@@ -57,11 +57,18 @@ namespace p05
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string text = textBox1.Text;//   ahoj   zdar  
+            string text = textBox3.Text;//   ahoj   zdar 
             text = text.Trim();//ahoj   zdar
-            string[] slova = text.Split(' ');
-
-            MessageBox.Show("pocet slov v textu je " + slova.Length);
+            int pocets = 0;
+            string[] slova = text.Split(' ');//ahoj  
+            foreach (string s in slova)
+            {
+                if (s != "")
+                {
+                    pocets++;
+                }
+            }
+            MessageBox.Show("pocet slov v textu je " + pocets);
         }
     }
 }
