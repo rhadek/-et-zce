@@ -59,7 +59,7 @@ namespace p08
             }
             else if (radioButton4.Checked)
             {
-                textBox1.Font = new Font(textBox1.Font.Name, 12);
+                textBox1.Font = new Font(textBox1.Font.Name, 20);
             }
 
 
