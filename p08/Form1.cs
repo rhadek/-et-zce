@@ -19,6 +19,7 @@ namespace p08
 
         private void button1_Click(object sender, EventArgs e)
         {
+            label1.Text = "";
             string text = textBox1.Text;
             string[] slova = text.Split(' ');
             if (checkBox1.Checked)
