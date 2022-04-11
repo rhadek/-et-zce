@@ -23,7 +23,7 @@ namespace p08
             string[] slova = text.Split(' ');
             if (checkBox1.Checked)
             {
-                MessageBox.Show("pocet slov v textu je " + slova.Length);
+                label1.Text += ("pocet slov v textu je " + slova.Length+ " ");
             }
             int pocetpismen = 0;
             string maxpis = "";
@@ -43,7 +43,7 @@ namespace p08
             }
             if (checkBox2.Checked)
             {
-                MessageBox.Show("nejdelsi slovo v textu ma " + maxp + " pismen a je to slovo: " + maxpis);
+                label1.Text+= ("nejdelsi slovo v textu ma " + maxp + " pismen a je to slovo: " + maxpis);
             }
             if (radioButton1.Checked)
             {
@@ -53,15 +53,13 @@ namespace p08
             {
                 textBox1.ForeColor = Color.Red;
             }
-            Font font = new Font("Microsoft Sans Serif", 12);
-            Font font1 = new Font("Microsoft Sans Serif", 20);
             if (radioButton3.Checked)
             {
-                textBox1.Font = font;
+                textBox1.Font = new Font(textBox1.Font.Name, 12);
             }
             else if (radioButton4.Checked)
             {
-                textBox1.Font = font1;
+                textBox1.Font = new Font(textBox1.Font.Name, 12);
             }
 
 
